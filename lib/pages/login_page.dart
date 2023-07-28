@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:modern_login_ui/components/my_textfield.dart';
 
+import '../components/my_button.dart';
+
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   // Text editing controllers
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  //sign user in method
+  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -80,9 +85,15 @@ class LoginPage extends StatelessWidget {
                   height: 25,
                 ),
                 //*sign in button
+                MyButton(
+                  onTap: signUserIn,
+                ),
 
+                const SizedBox(
+                  height: 50,
+                ),
                 //* or continue with
-
+                
                 //*google + apple sign in buttons
 
                 //* not a member? register now
